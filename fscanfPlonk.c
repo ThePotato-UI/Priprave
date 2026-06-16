@@ -15,7 +15,13 @@
 
 fscanf vrne stevilo uspeno prebranih elementov/argumentov in ne znakov ali EOF ce je konec datoteke
 
---FREAD-- --> BINARNE datotke
+--FREAD-- |--> BINARNE datotke
 fread(pointer, velikost_elementa(sizeof(itd.) v bajtih), stevilo_elementov, datoteka)
 fread vrne stevilo prebranih elementov k mora biti <= stevilo_elementov, ce je manj od 1 potem je ALI napaka ALI konec datoteke
+
+--FSEEK-- |--> PREMIKANJE PO DATOTEKI
+fseek(datoteka, OFFSET, argument) |--> argumenti: SEEK_SET -> na zacetek + OFFSET, SEEK_END -> na konec + OFFSET, 
+SEEK_CUR -> trenuntna poz + OFFSET
+
+ftell(datoteka) |--> vrne trenutno pozicijo v bajtih
 */
