@@ -11,7 +11,8 @@
 " " -- preskoci whitespace --> \n \t presledke
 "%*d" -- preberi int ampak ga ZAVRZI (* pomeni zavrzi)
 "%*[^,\n ]" -- pozri vse vejice, presledke in newline
-" \"%99[^\"]\"" -- preberi 99 znakov BREZ vejice, presledkov in narekovajev --> .."REKA",.. --> se shrani v pointerju kot REKA
+" \"%99[^,\"]\"" -- preberi 99 znakov BREZ vejice, presledkov in narekovajev --> .."REKA",.. --> se shrani v pointerju kot REKA
+" \"%99[^,\"]\" %*[,]" --> --||-- prebere in zavre se vejico na koncu 
 
 fscanf vrne stevilo uspeno prebranih elementov/argumentov in ne znakov ali EOF ce je konec datoteke
 
