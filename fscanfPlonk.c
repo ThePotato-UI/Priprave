@@ -1,5 +1,5 @@
 /*
---FSANF--
+--FSCANF--
 "%d/s/c/ld/f/lf/" -- int, string, char, long, float, double
 "%99x" -- beri max 99 znakov + \0
 "[...]" -- scanset -> beri dokler/kadar
@@ -25,4 +25,9 @@ fseek(datoteka, OFFSET, argument) |--> argumenti: SEEK_SET -> na zacetek + OFFSE
 SEEK_CUR -> trenuntna poz + OFFSET
 
 ftell(datoteka) |--> vrne trenutno pozicijo v bajtih
+
+--FGETS-- |--> prebere string z vkljucno z whitespaci iz datoteke
+fgets(char* buff, int max_znakov, datoteka);
+    -- prebere tudi \n na koncu vrstice to lahko odstranis z "line[strcspn(line, '\n')] == '\0'"
+    -- strcspn(char* arr, char iskan) vrne prvi index kjer se prikaže iskan char v stringu
 */
